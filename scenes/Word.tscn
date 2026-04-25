@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://djdi0gitm4ph5"]
+
+[ext_resource type="Script" uid="uid://bqno5t7no323o" path="res://word.gd" id="1_wyg85"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyg85"]
+
+[node name="Word" type="Area2D" unique_id=1533642860]
+script = ExtResource("1_wyg85")
+
+[node name="Label" type="Label" parent="." unique_id=187837650]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=356841975]
+shape = SubResource("RectangleShape2D_wyg85")

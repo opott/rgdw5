@@ -1,0 +1,120 @@
+[gd_scene format=4 uid="uid://dsndch44hq46p"]
+
+[ext_resource type="Script" uid="uid://d4f45llvcrxhd" path="res://scenes/mainscene.gd" id="1_4c2fu"]
+[ext_resource type="Script" uid="uid://cw1gkbx33qo2d" path="res://scenes/player.gd" id="1_golqe"]
+[ext_resource type="Texture2D" uid="uid://0xd343apu4sh" path="res://character1.png" id="1_hm37i"]
+[ext_resource type="Texture2D" uid="uid://c1eevskiqyewf" path="res://tilemap.png" id="3_nx3wj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_golqe"]
+size = Vector2(28, 18)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c2fu"]
+texture = ExtResource("3_nx3wj")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mo382"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_4c2fu")
+
+[node name="mainscene" type="Node" unique_id=2136651501]
+script = ExtResource("1_4c2fu")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1154879321]
+script = ExtResource("1_golqe")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=2133132621]
+texture = ExtResource("1_hm37i")
+region_enabled = true
+region_rect = Rect2(2, 14, 28, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1648408321]
+shape = SubResource("RectangleShape2D_golqe")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1494575413]
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=768036167]
+tile_map_data = PackedByteArray("AAD2/woAAAAEAAMAAAD3/woAAAAEAAMAAAD4/woAAAAEAAMAAAD5/woAAAAEAAMAAAD6/woAAAAEAAMAAAD7/woAAAAEAAMAAAD8/woAAAAEAAMAAAD9/woAAAAEAAMAAAD+/woAAAAEAAMAAAD//woAAAAEAAMAAAAAAAoAAAAEAAMAAAABAAoAAAAEAAMAAAACAAoAAAAEAAMAAAADAAoAAAAEAAMAAAAEAAoAAAAEAAMAAAAFAAoAAAAEAAMAAAAGAAoAAAAEAAMAAAAHAAoAAAAEAAMAAAD2/wsAAAAEAAIAAAD3/wsAAAAEAAIAAAD4/wsAAAAEAAIAAAD5/wsAAAAEAAIAAAD6/wsAAAAEAAIAAAD7/wsAAAAEAAIAAAD8/wsAAAAEAAIAAAD9/wsAAAAEAAIAAAD+/wsAAAAEAAIAAAD//wsAAAAEAAIAAAAAAAsAAAAEAAIAAAABAAsAAAAEAAIAAAACAAsAAAAEAAIAAAADAAsAAAAEAAIAAAAEAAsAAAAEAAIAAAAFAAsAAAAEAAIAAAAGAAsAAAAEAAIAAAAHAAsAAAAEAAIAAAA=")
+tile_set = SubResource("TileSet_mo382")
+
+[node name="WordapiRequester" type="HTTPRequest" parent="." unique_id=1363475482]
