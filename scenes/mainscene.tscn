@@ -119,4 +119,7 @@ tile_set = SubResource("TileSet_mo382")
 
 [node name="WordapiRequester" type="HTTPRequest" parent="." unique_id=1363475482]
 
+[node name="ImageRequester" type="HTTPRequest" parent="." unique_id=836508726]
+
 [connection signal="request_completed" from="WordapiRequester" to="." method="_on_wordapi_requester_request_completed"]
+[connection signal="request_completed" from="ImageRequester" to="." method="_on_image_requester_request_completed"]

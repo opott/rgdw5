@@ -4,7 +4,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wyg85"]
 
-[node name="Word" type="Area2D" unique_id=1533642860]
+[node name="Word" type="Sprite2D" unique_id=1740946806]
 script = ExtResource("1_wyg85")
 
 [node name="Label" type="Label" parent="." unique_id=187837650]
