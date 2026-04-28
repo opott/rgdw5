@@ -19,8 +19,9 @@ func _unhandled_input(event):
 				update_display()
 
 				if typed == word:
-					queue_free()
-					get_parent().get_node("Player").boost_jump()
+					get_parent().get_node("Player").boost_jump()  # Call player boost
+					get_parent().spawn_next_word()  # Spawn next word
+					queue_free()  # Remove current word
 			else:
 				typed = ""  # reset if wrong
 
